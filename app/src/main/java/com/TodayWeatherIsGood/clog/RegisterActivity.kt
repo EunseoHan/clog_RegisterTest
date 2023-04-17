@@ -28,12 +28,12 @@ class RegisterActivity : AppCompatActivity() {
         var yellow = 0
 
         binding.buttonSignUp.setOnClickListener {
-            val userNAME = binding.name.text.toString()
-            val userID = binding.id.text.toString()
-            val userEMAIL = binding.email.text.toString()
-            val userPASSWORD = binding.password.text.toString()
-            val userPASSWORDCHECK = binding.passwordCheck.text.toString()
-            val userPHONE = binding.phone.text.toString()
+            val userNAME = binding.namere.editableText.toString()
+            val userID = binding.idre.editableText.toString()
+            val userEMAIL = binding.emailre.text.toString()
+            val userPASSWORD = binding.passwordre.text.toString()
+            val userPASSWORDCHECK = binding.passwordCheckre.text.toString()
+            val userPHONE = binding.phonere.text.toString()
 
             if (binding.checkBoxRed.isChecked) {
                 red = 1
@@ -59,79 +59,69 @@ class RegisterActivity : AppCompatActivity() {
                 character = 3
             }
 
-            if (userNAME == "") {
-                Toast.makeText(
-                    this@RegisterActivity,
-                    "이름을 입력하세요.",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else if (userID == "") {
-                Toast.makeText(
-                    this@RegisterActivity,
-                    "아이디를 입력하세요.",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else if (userEMAIL == "") {
-                Toast.makeText(
-                    this@RegisterActivity,
-                    "이메일을 입력하세요.",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else if (userPASSWORD == "") {
-                Toast.makeText(
-                    this@RegisterActivity,
-                    "비밀번호를 입력하세요.",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else if (userPASSWORDCHECK == "") {
-                Toast.makeText(
-                    this@RegisterActivity,
-                    "비밀번호를 입력하세요.",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else if (userPASSWORD != userPASSWORDCHECK) {
-                Toast.makeText(
-                    this@RegisterActivity,
-                    "비밀번호가 다릅니다.",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else if (red == 0 && blue == 0 && brown == 0 && purple == 0 && yellow == 0) {
-                Toast.makeText(
-                    this@RegisterActivity,
-                    "선호하는 색을 선택하세요.",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else if (character == 0) {
-                Toast.makeText(
-                    this@RegisterActivity,
-                    "체질을 선택하세요",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else {
-                Toast.makeText(
-                    this@RegisterActivity,
-                    "11회원 등록에 성공하였습니다.11(가짜)",
-                    Toast.LENGTH_SHORT
-                ).show()
-                /*val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
-                startActivity(intent)*/
-                //확인용
-                println(userNAME)
-                println(userID)
-                println(userEMAIL)
-                println(userPASSWORD)
-                println(red)
-                println(blue)
-                println(brown)
-                println(purple)
-                println(yellow)
-                println(character)
-            }
-
+//            if (userNAME == "") {
+//                Toast.makeText(
+//                    this@RegisterActivity,
+//                    "이름을 입력하세요.",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//            } else if (userID == "") {
+//                Toast.makeText(
+//                    this@RegisterActivity,
+//                    "아이디를 입력하세요.",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//            } else if (userEMAIL == "") {
+//                Toast.makeText(
+//                    this@RegisterActivity,
+//                    "이메일을 입력하세요.",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//            } else if (userPASSWORD == "") {
+//                Toast.makeText(
+//                    this@RegisterActivity,
+//                    "비밀번호를 입력하세요.",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//            } else if (userPASSWORDCHECK == "") {
+//                Toast.makeText(
+//                    this@RegisterActivity,
+//                    "비밀번호확인을ㅅ 입력하세요.",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//            } else if (userPASSWORD != userPASSWORDCHECK) {
+//                Toast.makeText(
+//                    this@RegisterActivity,
+//                    "비밀번호가 다릅니다.",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+////            } else if (red == 0 && blue == 0 && brown == 0 && purple == 0 && yellow == 0) {
+////                Toast.makeText(
+////                    this@RegisterActivity,
+////                    "선호하는 색을 선택하세요.",
+////                    Toast.LENGTH_SHORT
+////                ).show()
+////            } else if (character == 0) {
+////                Toast.makeText(
+////                    this@RegisterActivity,
+////                    "체질을 선택하세요",
+////                    Toast.LENGTH_SHORT
+////                ).show()
+//            } else {
+//                Toast.makeText(
+//                    this@RegisterActivity,
+//                    "회원 등록에 성공하였습니다.",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//                /*val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+//                startActivity(intent)*/
+//                //확인용
+//            }
             //4. 할당된 Response로 콜백 처리하는 부분(volley 사용을 위한 R(r)esponseListener 구현 부분)
             val responseListener: Response.Listener<String> = Response.Listener<String> {
                 //서버로부터 여기서 데이터 받음
                 fun onResponse(response: String) {
+
                     //response-> //이거 아님 위에
                     try {
                         println("나 타고 있니?")
@@ -168,16 +158,81 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
             // responseListener 끝
-            
-            //volley 사용법
-            //1.RequestObject를 생성한다. 이때 서버로부터 데이터를 받을 responseListener를 반드시 넘겨준다.
-            val registerRequest =
-                RegisterRequest(userNAME,userID,userEMAIL,userPASSWORD,userPASSWORDCHECK,userPHONE, red, blue, brown, purple, yellow, character,
-                    responseListener)
-            //2.RequestQueue를 생성한다.
-            val queue = Volley.newRequestQueue(this@RegisterActivity)
-            //3.RequsertQueue를 RequestObject에 넘겨준다.
-            queue.add(registerRequest)
+
+
+            if(userNAME=="" || userID=="" || userEMAIL=="" ||userPASSWORD==""||userPASSWORDCHECK==""){
+                if (userNAME == "") {
+                    Toast.makeText(
+                        this@RegisterActivity,
+                        "이름을 입력하세요.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else if (userID == "") {
+                    Toast.makeText(
+                        this@RegisterActivity,
+                        "아이디를 입력하세요.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else if (userEMAIL == "") {
+                    Toast.makeText(
+                        this@RegisterActivity,
+                        "이메일을 입력하세요.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else if (userPASSWORD == "") {
+                    Toast.makeText(
+                        this@RegisterActivity,
+                        "비밀번호를 입력하세요.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else if (userPASSWORDCHECK == "") {
+                    Toast.makeText(
+                        this@RegisterActivity,
+                        "비밀번호 확인을 입력하세요.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else if (userPASSWORD != userPASSWORDCHECK) {
+                    Toast.makeText(
+                        this@RegisterActivity,
+                        "비밀번호가 다릅니다.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+//            } else if (red == 0 && blue == 0 && brown == 0 && purple == 0 && yellow == 0) {
+//                Toast.makeText(
+//                    this@RegisterActivity,
+//                    "선호하는 색을 선택하세요.",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//            } else if (character == 0) {
+//                Toast.makeText(
+//                    this@RegisterActivity,
+//                    "체질을 선택하세요",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+                }
+            }else if(userPASSWORD == userPASSWORDCHECK){
+                Toast.makeText(
+                    this@RegisterActivity,
+                    "회원 등록에 성공하였습니다.",
+                    Toast.LENGTH_SHORT
+                ).show()
+                //volley 사용법
+                //1.RequestObject를 생성한다. 이때 서버로부터 데이터를 받을 responseListener를 반드시 넘겨준다.
+                val registerRequest =
+                    RegisterRequest(userNAME,userID,userEMAIL,userPASSWORD,userPASSWORDCHECK,userPHONE, red, blue, brown, purple, yellow, character,
+                        responseListener)
+                //2.RequestQueue를 생성한다.
+                val queue = Volley.newRequestQueue(this@RegisterActivity)
+                //3.RequsertQueue를 RequestObject에 넘겨준다.
+                queue.add(registerRequest)
+            } else{
+                Toast.makeText(
+                    this@RegisterActivity,
+                    "비밀번호가 다릅니다.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
 
         }
     }

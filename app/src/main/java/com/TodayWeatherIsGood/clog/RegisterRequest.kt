@@ -68,7 +68,7 @@ class RegisterRequest(
     }
     companion object {
         // 서버 url 설정 (php 파일 연동)
-        private const val URL = "http://172.18.12.186:8080/Register.php" // "http:// 퍼블릭 DNS 주소/Register.php"
+        private const val URL = "http://125.128.243.30/Register.php" // "http:// 퍼블릭 DNS 주소/Register.php"
         //private const val URL = "http://192.168.200.168:8080/RegisterTest.php"
     }
 }

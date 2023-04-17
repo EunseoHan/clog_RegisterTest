@@ -39,13 +39,13 @@
         android:layout_height="wrap_content"
         android:text="비밀번호 확인"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintBottom_toTopOf="@+id/passwordCheck"
+        app:layout_constraintBottom_toTopOf="@+id/passwordCheckre"
         app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline15" />
 
     <EditText
-        android:id="@+id/passwordCheck"
+        android:id="@+id/passwordCheckre"
         android:layout_width="351dp"
         android:layout_height="40dp"
         android:background="@drawable/board"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
     <EditText
-        android:id="@+id/phone"
+        android:id="@+id/phonere"
         android:layout_width="351dp"
         android:layout_height="40dp"
         android:background="@drawable/board"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:text="전화번호(선택)"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintBottom_toTopOf="@+id/phone"
+        app:layout_constraintBottom_toTopOf="@+id/phonere"
         app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline14" />
@@ -186,7 +186,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordre"
         android:layout_width="351dp"
         android:layout_height="40dp"
         android:background="@drawable/board"
@@ -198,7 +198,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline12" />
 
     <EditText
-        android:id="@+id/id"
+        android:id="@+id/idre"
         android:layout_width="254dp"
         android:layout_height="40dp"
         android:background="@drawable/board"
@@ -218,13 +218,13 @@
         android:layout_height="wrap_content"
         android:text="이름"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintBottom_toTopOf="@+id/namere"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/namere"
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:background="@drawable/board"
@@ -245,7 +245,7 @@
         android:layout_height="wrap_content"
         android:text="아이디"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintBottom_toTopOf="@+id/id"
+        app:layout_constraintBottom_toTopOf="@+id/idre"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
@@ -259,7 +259,7 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toEndOf="@+id/id"
+        app:layout_constraintStart_toEndOf="@+id/idre"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
     <TextView
@@ -268,14 +268,14 @@
         android:layout_height="wrap_content"
         android:text="이메일"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintBottom_toTopOf="@+id/emailre"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/emailre"
         android:layout_width="351dp"
         android:layout_height="40dp"
         android:background="@drawable/board"

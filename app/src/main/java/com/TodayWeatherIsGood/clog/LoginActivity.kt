@@ -40,8 +40,8 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         })*/
         binding.buttonLogin.setOnClickListener(View.OnClickListener { // EditText에 현재 입력되어있는 값을 get(가져온다)해온다.
-            val userID=binding.id.text.toString()
-            val userPASSWORD=binding.password.text.toString()
+            val userID=binding.idre.text.toString()
+            val userPASSWORD=binding.passwordre.text.toString()
             val responseListener =
                 Response.Listener<String> { response ->
                     try {

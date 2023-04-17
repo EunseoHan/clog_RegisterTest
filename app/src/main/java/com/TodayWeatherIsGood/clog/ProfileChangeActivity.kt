@@ -21,9 +21,9 @@ class ProfileChangeActivity : AppCompatActivity() {
         var yellow = 0
 
         binding.buttonChange.setOnClickListener {
-            val password = binding.password.text.toString()
-            val passwordCheck = binding.passwordCheck.text.toString()
-            val phone = binding.phone.text.toString()
+            val password = binding.passwordre.text.toString()
+            val passwordCheck = binding.passwordCheckre.text.toString()
+            val phone = binding.phonere.text.toString()
 
             if (binding.checkBoxRed.isChecked){
                 red=1

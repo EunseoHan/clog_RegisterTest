@@ -15,12 +15,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonSignUp.setOnClickListener {
-            val name = binding.name.text.toString()
-            val id = binding.id.text.toString()
-            val email = binding.email.text.toString()
-            val password = binding.password.text.toString()
-            val passwordCheck = binding.passwordCheck.text.toString()
-            val phone = binding.phone.text.toString()
+            val name = binding.namere.text.toString()
+            val id = binding.idre.text.toString()
+            val email = binding.emailre.text.toString()
+            val password = binding.passwordre.text.toString()
+            val passwordCheck = binding.passwordCheckre.text.toString()
+            val phone = binding.phonere.text.toString()
             if(name=="") {
                 Toast.makeText(
                     this@MainActivity,
